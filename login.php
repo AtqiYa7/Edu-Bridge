@@ -70,22 +70,27 @@ $acemails = "";
 $acccode = "";
 if(isset($_POST['activate'])){
 	if(isset($_POST['actcode'])){
-		$user_login = mysql_real_escape_string($_POST['acemail']);
-		$user_login = mb_convert_case($user_login, MB_CASE_LOWER, "UTF-8");	
-		$user_acccode = mysql_real_escape_string($_POST['actcode']);
-		$result2 = mysql_query("SELECT * FROM user WHERE (email='$user_login') AND confirmCode='$user_acccode'");
-		$num3 = mysql_num_rows($result2);
+		$user_login = $con->real_escape_string($_POST['acemail']);
+		$user_login = mb_convert_case($user_login, MB_CASE_LOWER, "UTF-8");    
+		$user_acccode = $con->real_escape_string($_POST['actcode']);
+		$stmt = $con->prepare("SELECT * FROM user WHERE email=? AND confirmCode=?");
+		$stmt->bind_param("ss", $user_login, $user_acccode);
+		$stmt->execute();
+		$result2 = $stmt->get_result();
+		$num3 = $result2->num_rows;
 		echo $user_login;
-		if ($num3>0) {
-			$get_user_email = mysql_fetch_assoc($result2);
+		if ($num3 > 0) {
+			$get_user_email = $result2->fetch_assoc();
 			$get_user_uname_db = $get_user_email['id'];
 			$_SESSION['user_login'] = $get_user_uname_db;
 			setcookie('user_login', $user_login, time() + (365 * 24 * 60 * 60), "/");
-			mysql_query("UPDATE user SET confirmCode='0', activation='yes' WHERE email='$user_login'");
+			$stmt = $con->prepare("UPDATE user SET confirmCode='0', activation='yes' WHERE email=?");
+			$stmt->bind_param("s", $user_login);
+			$stmt->execute();
 			if (isset($_REQUEST['ono'])) {
-				$ono = mysql_real_escape_string($_REQUEST['ono']);
+				$ono = $con->real_escape_string($_REQUEST['ono']);
 				header("location: orderform.php?poid=".$ono."");
-			}else {
+			} else {
 				header('location: index.php');
 			}
 			exit();

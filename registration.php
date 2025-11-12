@@ -72,13 +72,7 @@ $_POST['first_name'] = trim($_POST['first_name']);
 						Signup email: ".$_POST['email']."
 						
 						";
-						//if (@mail($_POST['email'],"eBuyBD Activation Code",$msg, "From:eBuyBD <no-reply@tutorbd.xyz>")) {
-								
-						//}else {
-
-						//throw new Exception('Email is not valid!');
-						//success message
-
+						
 						$sql = "INSERT INTO `user` (`fullname`,`gender`,`email`,`phone`,`pass`,`type`,`confirmcode`) VALUES ('".$u_fname."','".$u_gender."','".$u_email."','".$u_mobile."','".$u_pass."','".$u_ac."','".$confirmCode."')";
 
 						if($con->query($sql)){
@@ -95,7 +89,7 @@ $_POST['first_name'] = trim($_POST['first_name']);
 							echo "Error: " . $sql . "<br>" . $con->error;
 						}
 
-						//}
+						
 						
 						
 					}else {
