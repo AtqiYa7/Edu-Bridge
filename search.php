@@ -46,8 +46,7 @@ $list_check = new checkboxlist();
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
 	
-	<!-- menu tab link -->
-	<link rel="stylesheet" type="text/css" href="css/homemenu.css">
+	<!-- homemenu removed -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
@@ -66,13 +65,6 @@ $list_check = new checkboxlist();
 			</div>
 		</header>
 		<div class="topnav">
-			<div class="parent2">
-		  <div class="test1 bimage1"><a href=""><img src="image/tech.png" title="IT Solution" style="border-radius: 50%;" width="42" height="42"></a></div>
-		  <div class="test2"><a href="#"><img src="image/eventmgt.png" title="Event Management" width="42" height="42" style="border-radius: 50%;"></a></div>
-		  <div class="test3"><a href="#"><img src="image/photography.png" title="Photography" width="42" height="42" style="border-radius: 50%;"></a></div>
-		  <div class="test4"><a href="#"><img src="image/teaching.png" title="Tution" style="border-radius: 50%;" width="42" height="42"></a></div>
-		  <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
-		</div>
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="active navlink" href="search.php">Search Tutor</a>
 			<?php 
@@ -422,8 +414,7 @@ $list_check = new checkboxlist();
 <!-- main jquery script -->
 <script  src="js/jquery-3.2.1.min.js"></script>
 
-<!-- homemenu tab script -->
-<script  src="js/homemenu.js"></script>
+<!-- homemenu script removed -->
 
 <!-- topnavfixed script -->
 <script  src="js/topnavfixed.js"></script>

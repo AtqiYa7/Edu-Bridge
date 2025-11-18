@@ -25,7 +25,7 @@ $time = new timeago();
     <title>Edu Bridge</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" type="text/css" href="css/homemenu.css">
+    <!-- homemenu removed -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="body1">
@@ -181,7 +181,7 @@ $time = new timeago();
 
 <!-- Scripts -->
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/homemenu.js"></script>
+<!-- homemenu script removed -->
 <script src="js/topnavfixed.js"></script>
 </body>
 </html>
