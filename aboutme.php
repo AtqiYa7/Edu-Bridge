@@ -201,7 +201,8 @@ $time = new timeago();
 						<div class="p_body">';
 							if($user == $user2){
 								echo '<div>
-								<a href="updateinfo.php" style="float: right; color: #aaa; font-weight: bold;"><img src="image/edit.png" height="25" width="25" ></a>
+								 
+								<a href="updateinfo.php" style="float: right; color: #aaa; font-weight: bold;"><i class="fa fa-ellipsis-v" style="font-size:18px; color:#333;"></i></a>
 							</div>';
 							}
 						
@@ -277,8 +278,8 @@ $time = new timeago();
 						<div class="p_body">';
 							if($user == $user2){
 								echo '<div>
-								<a href="updatetutioninfo.php?uid='.$user.'" style="float: right; color: #aaa; font-weight: bold;"><img src="image/edit.png" height="25" width="25" ></a>
-							</div>';
+								<a href="updatetutioninfo.php?uid='.$user.'" style="float: right; color: #aaa; font-weight: bold;"><i class="fa fa-ellipsis-v" style="font-size:18px; color:#333;"></i></a>
+								</div>';
 							}
 							echo '<h2 style="text-align: center;">Tution Informaion</h2>
 							<div class="itemrow">

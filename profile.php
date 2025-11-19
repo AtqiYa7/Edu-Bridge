@@ -189,7 +189,7 @@ $time = new timeago();
 							<div class="nfbody">
 							<div class="p_head">
 							<div>
-								<a href="editpost.php?pid='.$post_id.'" style="float: right; color: #aaa; font-weight: bold;"><img src="image/edit.png" height="25" width="25" ></a>
+								<a href="editpost.php?pid='.$post_id.'" style="float: right; color: #aaa; font-weight: bold;"><i class="fa fa-ellipsis-v" style="font-size:18px; color:#333;"></i></a>
 							</div>
 							<div>
 								<img src="image/profilepic/'.$pro_pic_db.'" width="41px" height="41px">
