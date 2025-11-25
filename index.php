@@ -25,7 +25,7 @@ $time = new timeago();
     <title>Edu Bridge</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- homemenu removed -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="body1">
@@ -45,7 +45,7 @@ $time = new timeago();
             echo '<a class="navlink" href="postform.php">Post</a>';
         }
         ?>
-        <a class="navlink" href="#contact">Contact</a>
+        
         <a class="navlink" href="#about">About</a>
 
         <div style="float: right;">

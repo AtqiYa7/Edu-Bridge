@@ -47,7 +47,7 @@ $time = new timeago();
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -64,12 +64,7 @@ $time = new timeago();
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="search.php">Search Tutor</a>
@@ -82,7 +77,7 @@ $time = new timeago();
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+	
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>
@@ -129,7 +124,7 @@ $time = new timeago();
 				<li style="float: left;">
 					<div class="settingsleftcontent">
 						<ul>
-							<li><?php echo '<a href="profile.php?uid='.$user.'" style=" background-color: #4CAF50;; border-radius: 4px; color: #fff;" >Post</a>'; ?></li>
+							<li><?php echo '<a href="profile.php?uid='.$user.'" style=" background-color:  #2563eb; border-radius: 4px; color: #fff;" >Post</a>'; ?></li>
 							<li><?php echo '<a href="aboutme.php?uid='.$user.'" >About</a>'; ?></li>
 							<li><?php echo '<a href="settings.php">Settings</a>'; ?></li>
 						</ul>
@@ -271,6 +266,5 @@ $time = new timeago();
 
 
 </div>
-<!-- homemenu script removed -->
 </body>
 </html>

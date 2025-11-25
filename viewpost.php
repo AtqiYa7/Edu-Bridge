@@ -59,7 +59,7 @@ if (isset($_POST['post_apply'])) {
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -88,7 +88,6 @@ if (isset($_POST['post_apply'])) {
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>

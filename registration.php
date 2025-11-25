@@ -49,9 +49,11 @@ $_POST['first_name'] = trim($_POST['first_name']);
 			throw new Exception('Password can not be empty');
 			
 		}
+		if($_POST['password'] != $_POST['cpassword']) {
+			throw new Exception('Passwords do not match!');
+		}
 		
 		// Check if email already exists
-		
 		$check = 0;
 		$e_check = $con->query("SELECT email FROM `user` WHERE email='$u_email'");
 		$email_check = mysqli_num_rows($e_check);
@@ -121,7 +123,7 @@ $_POST['first_name'] = trim($_POST['first_name']);
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/reg.css" rel="stylesheet" type="text/css" media="all" />
 
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="">
@@ -137,17 +139,11 @@ $_POST['first_name'] = trim($_POST['first_name']);
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="search.php">Search Tutor</a>
 			<a class="navlink" href="postform.php">Post</a>
-			<a class="navlink" href="#contact">Contact</a>
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>

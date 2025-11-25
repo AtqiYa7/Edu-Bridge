@@ -122,9 +122,90 @@ if(isset($_POST['activate'])){
 	<link href="css/reg.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- homemenu removed -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<style>
+		body.global-login-body {
+			font-family: 'Open Sans', 'Segoe UI', sans-serif;
+			background: #f4f5f9;
+		}
 
+		.global-login-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: calc(100vh - 220px);
+			padding: 40px 16px 80px;
+		}
+
+		.testbox.global-login-card {
+			width: 100%;
+			max-width: 480px;
+			padding-bottom: 24px;
+		}
+
+		.testbox.global-login-card h1 {
+			margin-top: 24px;
+			font-size: 32px;
+		}
+
+		.testbox.global-login-card input[type="text"],
+		.testbox.global-login-card input[type="password"] {
+			width: 100%;
+			margin: 14px 0 0;
+			border-radius: 4px;
+		}
+
+		.global-login-btn {
+			width: 100%;
+			margin: 24px 0 0;
+			height: 40px;
+			float: none;
+			background-color: #2563eb;
+		}
+
+		.global-login-btn:hover {
+			background-color: #1d4ed8;
+		}
+
+		.global-login-options {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 12px;
+		}
+		.global-login-options label {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: #4b5563;
+			font-size: 14px;
+		}
+		.global-forgot-link {
+			color: #2563eb;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		.global-support-links {
+			padding: 12px 0 0;
+			text-align: center;
+		}
+
+		.global-support-links p {
+			margin: 6px 0;
+			font-size: 14px;
+			color: #4b5563;
+		}
+
+		.global-support-links a {
+			color: #2563eb;
+			font-weight: 600;
+			margin-left: 4px;
+			text-decoration: none;
+		}
+	</style>
 </head>
-<body class="">
+<body class="global-login-body">
 <div>
 <div>
 		<header class="header">
@@ -183,35 +264,26 @@ if(isset($_POST['activate'])){
 			</div>
 		</div>
 	</div>
-	<div class="nbody" style="margin: 0px 100px; overflow: hidden;">
-		<div class="nfeedleft" style="background-color: unset;">
-			<div>
-		<div class="testbox" style="height: 280px;">
-  <h1>Login</h1>
-
-  <form action="" method="post">
-      <hr>
-  <input type="text" name="email" id="name" placeholder="Email" required/>
-  <input type="password" name="password" id="name" placeholder="Password" required/>
-  <div>
-  <div style="float: right; width: 35%; margin-top: 10px;">
-  	<input type="submit" class="sub_button" name="login" id="name" value="Login"/><br><br>
-  </div>
-  <div style="width: 50%; float: left; padding: 10px 0 5px 4px">
-  	<p>Forget your password?<a href="#" style="font-weight: bold;">Click here</a>.</p>
-  <p>Not registered yet?<a href="registration.php" style="font-weight: bold;">Register here</a>.</p>
-  </div>
-  </div>
-  </form>
-</div>
-	</div>
-		</div>
-		<div class="nfeedright">
-			
+	<div class="global-login-wrapper">
+		<div class="testbox global-login-card">
+			<h1>Login</h1>
+			<form action="" method="post">
+				<hr>
+				<input type="text" name="email" id="name" placeholder="Email" required/>
+				<input type="password" name="password" id="name" placeholder="Password" required/>
+				<div class="global-login-options">
+					<label><input type="checkbox" name="remember" /> Remember me</label>
+					<a href="#" class="global-forgot-link">Forgot password?</a>
+				</div>
+				<input type="submit" class="sub_button global-login-btn" name="login" id="name" value="Sign In"/>
+				<div class="global-support-links">
+					<p>Don't have an account?<a href="registration.php">Sign up now</a></p>
+				</div>
+				<?php if (!empty($error_message)) { echo $error_message; } ?>
+			</form>
 		</div>
 	</div>
 
-	
 	<div>
 	<?php
 		include 'inc/footer.inc.php';

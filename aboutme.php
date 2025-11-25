@@ -50,7 +50,7 @@ $time = new timeago();
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -67,12 +67,7 @@ $time = new timeago();
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="search.php">Search Tutor</a>
@@ -135,7 +130,7 @@ $time = new timeago();
 					<div class="settingsleftcontent">
 						<ul>
 							<li><a href="profile.php?uid='.$user.'" >Post</a></li>
-							<li><a href="aboutme.php?uid='.$user.'" style=" background-color: #4CAF50;; border-radius: 4px; color: #fff;" >About</a></li>
+							<li><a href="aboutme.php?uid='.$user.'" style=" background-color:rgb(21, 112, 187);; border-radius: 4px; color: #fff;" >About</a></li>
 							<li><a href="settings.php">Settings</a></li>
 						</ul>
 					</div>
@@ -155,25 +150,49 @@ $time = new timeago();
 				
 					<?php
 
-						$query1 = $con->query("SELECT * FROM user WHERE id='$user2'");
-						$user_fname = $query1->fetch_assoc();
-						$uname_db = $user_fname['fullname'];
-						$pro_pic_db = $user_fname['user_pic'];
-						$ugender_db = $user_fname['gender'];
-						$uemail_db = $user_fname['email'];
-						$uphone_db = $user_fname['phone'];
-						$ugender_db = $user_fname['gender'];
-						$uaddress_db = $user_fname['address'];
-						$utype_db = $user_fname['type'];
+					$query1 = $con->query("SELECT * FROM user WHERE id='$user2'");
+					$user_fname = $query1->fetch_assoc();
+					
+					// Check if user exists
+					if($user_fname) {
+						$uname_db = $user_fname['fullname'] ?? '';
+						$pro_pic_db = $user_fname['user_pic'] ?? '';
+						$ugender_db = $user_fname['gender'] ?? '';
+						$uemail_db = $user_fname['email'] ?? '';
+						$uphone_db = $user_fname['phone'] ?? '';
+						$uaddress_db = $user_fname['address'] ?? '';
+						$utype_db = $user_fname['type'] ?? '';
+					} else {
+						// Default values if user not found
+						$uname_db = '';
+						$pro_pic_db = '';
+						$ugender_db = '';
+						$uemail_db = '';
+						$uphone_db = '';
+						$uaddress_db = '';
+						$utype_db = '';
+					}
 
-						$query2 = $con->query("SELECT * FROM tutor WHERE t_id='$user2' ORDER BY id DESC");
-						$tutor_info = $query2->fetch_assoc();
-						$uinsname_db = $tutor_info['inst_name'];
-						$umedium_db = $tutor_info['medium'];
-						$usalrange_db = $tutor_info['salary'];
-						$uclass_db = $tutor_info['class'];
-						$upresub_db = $tutor_info['prefer_sub'];
-						$upreloca_db = $tutor_info['prefer_location'];
+					$query2 = $con->query("SELECT * FROM tutor WHERE t_id='$user2' ORDER BY id DESC");
+					$tutor_info = $query2->fetch_assoc();
+					
+					// Check if tutor info exists
+					if($tutor_info) {
+						$uinsname_db = $tutor_info['inst_name'] ?? '';
+						$umedium_db = $tutor_info['medium'] ?? '';
+						$usalrange_db = $tutor_info['salary'] ?? '';
+						$uclass_db = $tutor_info['class'] ?? '';
+						$upresub_db = $tutor_info['prefer_sub'] ?? '';
+						$upreloca_db = $tutor_info['prefer_location'] ?? '';
+					} else {
+						// Default values if tutor info not found
+						$uinsname_db = '';
+						$umedium_db = '';
+						$usalrange_db = '';
+						$uclass_db = '';
+						$upresub_db = '';
+						$upreloca_db = '';
+					}
 
 						if($pro_pic_db == ""){
 								if($ugender_db == "male"){

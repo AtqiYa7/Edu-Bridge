@@ -1,2 +1,8 @@
-<h1><a href="index.php">Edu<span> Bridge</span></a></h1>
-<h3><a href="#">Hotline:018xxxxxxx</a></h3>
+<?php
+$basePath = isset($basePath) ? $basePath : '';
+?>
+<h1><a href="<?php echo $basePath; ?>index.php">Edu<span> Bridge</span></a></h1>
+<h3>
+	<span>Hotline:018xxxxxxx</span>
+	<a class="admin-entry" href="<?php echo $basePath; ?>admin/login.php">Admin Portal</a>
+</h3>

@@ -37,7 +37,7 @@ $time = new timeago();
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
 
-	<!-- homemenu removed -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	
@@ -69,7 +69,7 @@ $time = new timeago();
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+		
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>
@@ -190,18 +190,16 @@ $time = new timeago();
 									<img src="image/profilepic/'.$pro_pic_db.'" width="41px" height="41px">
 								</div>
 								<div class="p_nmdate">
-									<h4><a href="aboutme.php?uid='.$post_by_id.'" style="color: #087E0D;">'.$uname_db.'</a> <span style="color: #626262; font-weight: 100;">'.$notimsg.'</span></h4>
+									<h4><a href="aboutme.php?uid='.$post_by_id.'" style="color: #2563eb;">'.$uname_db.'</a> <span style="color: #626262; font-weight: 100;">'.$notimsg.'</span></h4>
 									<h5 style="color: #757575;"><a class="c_ptime" >'.$time->time_ago($deadline).'</a></h5>
 								</div>
 							</div>
 						</div>';
-
-
-
 						}
-						}
+					}
 						
-					}elseif($utype_db == 'student'){
+						
+				}elseif($utype_db == 'student'){
 						$query = $con->query("SELECT * FROM applied_post WHERE post_by='$user' ORDER BY id DESC");
 						while ($row = $query->fetch_assoc()) {
 							$post_id = $row['post_id'];
@@ -262,7 +260,7 @@ $time = new timeago();
 									<img src="image/profilepic/'.$pro_pic_db.'" width="41px" height="41px">
 								</div>
 								<div class="p_nmdate">
-									<h4><a href="aboutme.php?uid='.$applied_by_id.'" style="color: #087E0D;">'.$uname_db.'</a> <span style="color: #626262; font-weight: 100;">'.$notimsg.'</span></h4>
+									<h4><a href="aboutme.php?uid='.$applied_by_id.'" style="color: #2563eb;">'.$uname_db.'</a> <span style="color: #626262; font-weight: 100;">'.$notimsg.'</span></h4>
 									<h5 style="color: #757575;"><a class="c_ptime" href="viewpost.php?pid='.$post_id.'">'.$time->time_ago($deadline).'</a></h5>
 								</div>
 							</div>

@@ -1,4 +1,7 @@
-
+<?php
+// Detect if we're in a subdirectory (like admin/) or root
+$imagePath = (basename(dirname($_SERVER['PHP_SELF'])) === 'admin') ? '../image/' : 'image/';
+?>
 
 	<div class="footerMain">
 		<div class="content">
@@ -19,8 +22,8 @@
 				<div class="footer three">
 					<h3>Contact Information</h3>
 					<ul>
-						<li><span class="c-icon"><img src="../image/image1.png" alt="Phone"></span><span class="c-text">0123456789</span></li>
-						<li><span class="c-icon"><img src="../image/image2.png" alt="Email"></span><span class="c-text">atqiyaanju@gmail.com</span></li>
+						<li><span class="c-icon"><img src="<?php echo $imagePath; ?>image1.png" alt="Phone"></span><span class="c-text">+8801234567890</span></li>
+						<li><span class="c-icon"><img src="<?php echo $imagePath; ?>image2.png" alt="Email"></span><span class="c-text">atqiyaanju@gmail.com</span></li>
 					</ul>
 				</div>
 				<div class="clear"></div>

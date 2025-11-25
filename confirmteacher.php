@@ -22,7 +22,7 @@ if (isset($_REQUEST['confirm'])) {
 		$get_user_name = $result->fetch_assoc();
 			$uname = $get_user_name['fullname'];
 			$utype = $get_user_name['type'];
-		$error = "You Successfully Selected <a href='aboutme.php?uid=".$tid."' style='color: #4CAF50;'>".$uname."</a>";
+		$error = "You Successfully Selected <a href='aboutme.php?uid=".$tid."' style='color: #2563eb;'>".$uname."</a>";
 }else{
 		header('location: logout.php');
 	}
@@ -37,7 +37,7 @@ if (isset($_REQUEST['confirm'])) {
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-		<!-- homemenu removed -->
+		
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -54,12 +54,7 @@ if (isset($_REQUEST['confirm'])) {
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		
 		<div class="topnav">
 			<a class="active navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
@@ -73,7 +68,7 @@ if (isset($_REQUEST['confirm'])) {
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+			
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>

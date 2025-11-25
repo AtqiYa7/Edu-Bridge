@@ -129,7 +129,7 @@ $list_check = new checkboxlist();
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<!-- date link end -->
 	
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
@@ -159,7 +159,7 @@ $list_check = new checkboxlist();
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+		
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>
@@ -301,7 +301,6 @@ $list_check = new checkboxlist();
 <!-- main jquery script -->
 <script  src="js/jquery-3.2.1.min.js"></script>
 
-<!-- homemenu script removed -->
 
 <!-- topnavfixed script -->
 <script  src="js/topnavfixed.js"></script>

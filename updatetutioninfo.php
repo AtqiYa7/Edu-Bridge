@@ -20,14 +20,16 @@ if (isset($_REQUEST['uid'])) {
 	$pstid = mysqli_real_escape_string($con, $_REQUEST['uid']);
 	$result1 = $con->query("SELECT * FROM tutor WHERE t_id='$user' ORDER BY id DESC");
 	$get_tutor_name = $result1->fetch_assoc();
-	$tid_db = $get_tutor_name['t_id'];
-	$id_db = $get_tutor_name['id'];
-	$uinst_db = $get_tutor_name['inst_name'];
-	$medium = $get_tutor_name['medium'];
-	$cls = $get_tutor_name['class'];
-	$sub = $get_tutor_name['prefer_sub'];
-	$f_sal = $get_tutor_name['salary'];
-	$plocation_db = $get_tutor_name['prefer_location'];
+	
+	// Initialize variables with default values
+	$tid_db = isset($get_tutor_name['t_id']) ? $get_tutor_name['t_id'] : '';
+	$id_db = isset($get_tutor_name['id']) ? $get_tutor_name['id'] : '';
+	$uinst_db = isset($get_tutor_name['inst_name']) ? $get_tutor_name['inst_name'] : '';
+	$medium = isset($get_tutor_name['medium']) ? $get_tutor_name['medium'] : '';
+	$cls = isset($get_tutor_name['class']) ? $get_tutor_name['class'] : '';
+	$sub = isset($get_tutor_name['prefer_sub']) ? $get_tutor_name['prefer_sub'] : '';
+	$f_sal = isset($get_tutor_name['salary']) ? $get_tutor_name['salary'] : '';
+	$plocation_db = isset($get_tutor_name['prefer_location']) ? $get_tutor_name['prefer_location'] : '';
 
 	if($user != $_REQUEST['uid']){
 		header('location: index.php');
@@ -87,8 +89,7 @@ if (isset($_POST['updatetutioninfo'])) {
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- menu tab link -->
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -105,12 +106,7 @@ if (isset($_POST['updatetutioninfo'])) {
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="#news">Search Tutor</a>
@@ -123,7 +119,6 @@ if (isset($_POST['updatetutioninfo'])) {
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>

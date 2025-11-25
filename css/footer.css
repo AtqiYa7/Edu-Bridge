@@ -116,29 +116,29 @@ display:block;
 	padding: 10px 0 10px 52px;
 }
 .footer.three ul{
-	text-align: center;
+	text-align: left;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 8px;
 	margin-top: 10px;
 }
 
 .footer-three ul li {
-    display: flex;              /* Use flexbox for alignment */
-    align-items: center;        /* Vertical alignment */
-    justify-content: center;    /* Center horizontally */
-    gap: 10px;                  /* Space between icon and text */
-    margin: 8px 0;              /* Space between phone & email */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 4px 0;
     font-size: 14px;
     color: #908F8F;
     line-height: 1.5em;
 }
 
 .footer-three ul li .c-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;             /* Prevent icon from shrinking */
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .footer-three ul li .c-icon img {
@@ -163,15 +163,15 @@ display:block;
 .footer.three ul li {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0;
     gap: 12px;
 }
 
 .footer.three ul li .c-icon {
-    flex: 0 0 20px;
-    width: 20px;
-    height: 20px;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     opacity: 0.7;
@@ -192,25 +192,25 @@ display:block;
 }
 /* === Modified Contact Info Alignment (Added) === */
 .footer.three ul {
-    text-align: center;
+    text-align: left;
     padding: 0;
 }
 
 .footer.three ul li {
     list-style: none;
     display: flex;
-    align-items: center;       /* vertically align icon + text */
-    justify-content: center;   /* center horizontally */
-    gap: 10px;                 /* space between icon and text */
-    margin: 8px 0;             /* spacing between phone & email lines */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 4px 0;
     color: #908F8F;
     font-size: 14px;
     line-height: 1.8em;
 }
 
 .footer.three ul li .c-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     opacity: 0.8;
 }
 
@@ -218,6 +218,17 @@ display:block;
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Font Awesome icon sizing inside contact icon container */
+.footer.three ul li .c-icon i {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 16px;
+	color: #908F8F;
 }
 
 .footer.three ul li .c-text,

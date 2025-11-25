@@ -49,12 +49,7 @@ if (isset($_REQUEST['teacher'])) {
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a  onclick="w3_open()"><img src="image/menuicon2.png" width="16px" height="15px"></a>
 			<a class="active" href="index.php" style="margin: 0px 0px 0px 52px;">Newsfeed</a>
@@ -68,7 +63,7 @@ if (isset($_REQUEST['teacher'])) {
 				}
 
 			 ?>
-			<a href="#contact">Contact</a>
+			
 			<a href="#about">About</a>
 			<div style="float: right;" >
 				<table>

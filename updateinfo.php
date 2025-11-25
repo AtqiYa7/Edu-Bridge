@@ -20,9 +20,9 @@ else {
 
 			$result1 = $con->query("SELECT * FROM tutor WHERE t_id='$user' ORDER BY id DESC");
 		$get_tutor_name = $result1->fetch_assoc();
-			$uinst_db = $get_tutor_name['inst_name'];
-			$umedium_db = $get_tutor_name['medium'];
-			$usalrange_db = $get_tutor_name['salary'];
+			$uinst_db = isset($get_tutor_name['inst_name']) ? $get_tutor_name['inst_name'] : '';
+			$umedium_db = isset($get_tutor_name['medium']) ? $get_tutor_name['medium'] : '';
+			$usalrange_db = isset($get_tutor_name['salary']) ? $get_tutor_name['salary'] : '';
 
 			if($pro_pic_db == ""){
 					if($ugender_db == "male"){
@@ -113,7 +113,7 @@ if (((@$_FILES['profilepic']['type']=='image/jpeg') || (@$_FILES['profilepic']['
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body class="body1">
@@ -129,12 +129,7 @@ if (((@$_FILES['profilepic']['type']=='image/jpeg') || (@$_FILES['profilepic']['
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" stylRe="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="#news">Search Tutor</a>
@@ -147,7 +142,7 @@ if (((@$_FILES['profilepic']['type']=='image/jpeg') || (@$_FILES['profilepic']['
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+		
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>
