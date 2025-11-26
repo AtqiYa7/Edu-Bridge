@@ -1,14 +1,14 @@
-Edu Bridge – Online Private Tutor System
+###Edu Bridge – Online Private Tutor System
 
 
-Project Overview
+#Project Overview
 
 Edu Bridge is an online private tutoring system where Public users,
 Students/Parents, Teachers, and Admins interact through different
 features such as searching tutors, posting applications, managing
 profiles, and monitoring system activities.
 
-User Roles
+#User Roles
 
 -   Public: Search tutors and view posts.
 -   Student/Parents: Apply for teachers, update or delete posts, change
@@ -16,7 +16,7 @@ User Roles
 -   Teacher: Manage tutor profiles, applications, and posts.
 -   Admin: Monitor activities, approve tutors, and maintain records.
 
-Project Tasks
+#Project Tasks
 
 -   Homepage with login options
 -   Tutor search and post viewing
@@ -24,12 +24,12 @@ Project Tasks
 -   Profile update and password reset
 -   Admin dashboard with full monitoring
 
-Backlog Summary
+#Backlog Summary
 
 -   Each feature contains pass/fail acceptance criteria to ensure system
     quality.
 
-Developer Info
+#Developer Info
 
 Name: Atqiya Anjum
 
