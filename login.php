@@ -1,14 +1,5 @@
 <?php
-
-$con = new mysqli('localhost', 'root', '', 'main_db');
-
-if($con->connect_errno > 0){
-    die('Unable to connect to database [' . $con->connect_error . ']');
-}
-
-?>
-
-<?php
+include("inc/connection.inc.php");
 ob_start();
 session_start();
 if (!isset($_SESSION['user_login'])) {
@@ -120,7 +111,7 @@ if(isset($_POST['activate'])){
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/reg.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- homemenu removed -->
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<style>
 		body.global-login-body {
@@ -218,12 +209,7 @@ if(isset($_POST['activate'])){
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="search.php">Search Tutor</a>
@@ -236,7 +222,7 @@ if(isset($_POST['activate'])){
 				}
 
 			 ?>
-			<a class="navlink" href="#contact">Contact</a>
+
 			<a class="navlink" href="#about">About</a>
 			<div style="float: right;" >
 				<table>
@@ -290,6 +276,6 @@ if(isset($_POST['activate'])){
 	?>
 	</div>
 	</div>
-<!-- homemenu script removed -->
+
 </body>
 </html>

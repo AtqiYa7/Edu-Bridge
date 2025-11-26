@@ -145,12 +145,7 @@ if (isset($_POST['submit'])) {
 
 			</div>
 		</header>
-		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:100px;" id="mySidebar">
-		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
-		  <a href="photography.php" class="w3-bar-item w3-button">Photography</a>
-		  <a href="#" class="w3-bar-item w3-button">IT</a>
-		</div>
+		
 		<div class="topnav">
 			<a class="navlink" href="index.php" style="margin: 0px 0px 0px 100px;">Newsfeed</a>
 			<a class="navlink" href="#news">Search Tutor</a>
@@ -291,9 +286,9 @@ if (isset($_POST['submit'])) {
 								<select name="p_university">
 								<?php if($p_uni!="") echo '<option value="'.$p_uni.'">'.$p_uni.'</option>';  ?>
 							  <option value="None">None</option>
-							  <option value="Southeast University">Southeast University</option>
-							  <option value="Brac University">Brac University</option>
-							  <option value="Dhaka Univesity">Dhaka Univesity</option>
+							  <option value="North East University">North East University</option>
+							  <option value="Leading University">Leading University</option>
+							  <option value="Sylhet University">Sylhet University</option>
 							</select>
 							</div>
 						</div>

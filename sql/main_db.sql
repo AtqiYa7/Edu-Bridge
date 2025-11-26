@@ -48,7 +48,7 @@ CREATE TABLE `post` (
   `salary` varchar(50) NOT NULL,
   `location` text NOT NULL,
   `p_university` text NOT NULL,
-  `post_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `post_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deadline` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
